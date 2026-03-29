@@ -11,7 +11,7 @@ public class RestClientConfig {
     public RestClient googlePlacesRestClient(GooglePlacesConfig config) {
         return RestClient.builder()
                 .baseUrl(config.getBaseUrl())
-                .defaultHeader(config.getHeaderMap().get("key"), config.getApiKey())
+                .defaultHeader(config.getHeaders().get("key"), config.getApiKey())
                 .build();
     }
 }

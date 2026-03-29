@@ -3,7 +3,7 @@ spring:
     name: google_places_mcp_server
 
   main:
-    web-application-type: none # stdio mode — no HTTP server needed
+    web-application-type: none
 
   ai:
     mcp:
@@ -11,11 +11,11 @@ spring:
         name: google-places-mcp-server
         version: 1.0.0
         type: SYNC
-        stdio: true # enables stdio transport
+        stdio: true
 
 google:
   places:
-    baseUrl: https://maps.googleapis.com/maps/api/place
-    header:
+    base-url: https://places.googleapis.com/v1 # ← kebab-case
+    api-key: ${GOOGLE_PLACES_API_KEY:} # ← kebab-case
+    headers:
       key: X-Goog-Api-Key
-    apiKey: ${GOOGLE_PLACES_API_KEY:} # expects GOOGLE_PLACES_API_KEY env variable to be set

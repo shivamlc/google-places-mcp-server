@@ -5,13 +5,11 @@ import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import lombok.Data;
-import lombok.Getter;
 
 @ConfigurationProperties(prefix = "google.places")
 @Data
-@Getter
 public class GooglePlacesConfig {
     private String baseUrl;
-    private Map<String, String> headerMap;
+    private Map<String, String> headers;
     private String apiKey;
 }

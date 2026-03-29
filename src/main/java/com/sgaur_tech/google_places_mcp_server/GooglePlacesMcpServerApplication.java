@@ -4,8 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
+import com.sgaur_tech.google_places_mcp_server.config.GooglePlacesConfig;
+
 @SpringBootApplication
-@EnableConfigurationProperties(com.sgaur_tech.google_places_mcp_server.config.GooglePlacesConfig.class)
+@EnableConfigurationProperties(GooglePlacesConfig.class)
 public class GooglePlacesMcpServerApplication {
 
 	public static void main(String[] args) {
