@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: google_places_mcp_server
